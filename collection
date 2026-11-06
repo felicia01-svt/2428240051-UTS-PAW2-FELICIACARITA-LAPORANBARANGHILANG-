@@ -1,0 +1,227 @@
+{
+  "info": {
+    "_postman_id": "abd25760-940b-497a-a259-416634be22f5",
+    "name": "Laporan Barang Hilang",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58519451",
+    "_collection_link": "https://go.postman.co/collection/58519451-abd25760-940b-497a-a259-416634be22f5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CREATE LAPORAN",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"item_name\": \"Little Dior Bag\",\r\n  \"last_location\": \"Palembang,Sudirman\",\r\n  \"lost_date\": 19980101,\r\n  \"is_found\": false\r\n\r\n}\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/laporan",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "laporan"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LIST LAPORAN",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE LAPORAN",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"item_name\": \"Little Gucci Bag\",\r\n  \"last_location\": \"Palembang,Sudirman\",\r\n  \"lost_date\": 19980101,\r\n  \"is_found\": false\r\n\r\n}\r\n\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/laporan/:6aedb2b56dac3df96b7891bc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "laporan",
+            ":6aedb2b56dac3df96b7891bc"
+          ],
+          "variable": [
+            {
+              "key": "6aedb2b56dac3df96b7891bc",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE LAPORAN",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/laporan/:6aedb2b56dac3df96b7891bc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "laporan",
+            ":6aedb2b56dac3df96b7891bc"
+          ],
+          "variable": [
+            {
+              "key": "6aedb2b56dac3df96b7891bc",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DETAIL LAPORAN",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/laporan/:6aedb2b56dac3df96b7891bc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "laporan",
+            ":6aedb2b56dac3df96b7891bc"
+          ],
+          "variable": [
+            {
+              "key": "6aedb2b56dac3df96b7891bc",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SEARCH LAPORAN",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/laporan?search=iphone",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "laporan"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "iphone"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SORT DESC",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/laporan?sortBy=name&sort=desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "laporan"
+          ],
+          "query": [
+            {
+              "key": "sortBy",
+              "value": "name"
+            },
+            {
+              "key": "sort",
+              "value": "desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SORT ASC",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/laporan?sortBy=lost_date&sort=asc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "laporan"
+          ],
+          "query": [
+            {
+              "key": "sortBy",
+              "value": "lost_date"
+            },
+            {
+              "key": "sort",
+              "value": "asc"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
