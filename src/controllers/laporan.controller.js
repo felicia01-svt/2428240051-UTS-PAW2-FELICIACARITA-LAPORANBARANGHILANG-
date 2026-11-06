@@ -122,7 +122,7 @@ class LaporanController {
   }
 
   static async update(req, res) {
-    const LaporanIdId = req.params.id
+    const LaporanId = req.params.id
     const result = updateLaporanSchema.safeParse(req.body);
 
     if (!result.success) {
@@ -141,8 +141,8 @@ class LaporanController {
             return apiResponse({ res, status: 404, message: 'Laporan tidak ditemukan' })
         }
 
-        const updatedLaporan = await LaporanIdIdModel.findOneAndUpdate(
-            { _id: LaporanId },
+        const updatedLaporan = await LaporanIdModel.findOneAndUpdate(
+            { _id: LaporanId},
             { name },
             { new: true }
         )
