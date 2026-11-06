@@ -141,7 +141,7 @@ class LaporanController {
             return apiResponse({ res, status: 404, message: 'Laporan tidak ditemukan' })
         }
 
-        const updatedLaporan = await LaporanIdModel.findOneAndUpdate(
+        const updatedLaporan = await LaporanModel.findOneAndUpdate(
             { _id: LaporanId},
             { name },
             { new: true }
